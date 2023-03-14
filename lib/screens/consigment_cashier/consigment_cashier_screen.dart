@@ -1,20 +1,19 @@
-//Step 6 for the process
 import 'package:flutter/material.dart';
 
-class PaymentPage extends StatefulWidget {
-  const PaymentPage({super.key});
+class ConsigmentPage extends StatefulWidget {
+  const ConsigmentPage({super.key});
 
   @override
-  State<PaymentPage> createState() => _PaymentPageState();
+  State<ConsigmentPage> createState() => _ConsigmentPageState();
 }
 
-class _PaymentPageState extends State<PaymentPage> {
+class _ConsigmentPageState extends State<ConsigmentPage> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Cobranza de Venta"),
+        title: const Text("Remesa a banco"),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8),
@@ -46,50 +45,22 @@ class _PaymentPageState extends State<PaymentPage> {
                     decoration: const InputDecoration(
                         filled: true,
                         hintText: '0123',
-                        labelText: 'Nro de Orden de Salida'),
-                  ),
-                  TextFormField(
-                    keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
-                        filled: true,
-                        hintText: '123456',
-                        labelText: 'Nro de Camión'),
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        filled: true,
-                        hintText: 'ABC1234',
-                        labelText: 'Nro de Placa',
-                        prefixText: ''),
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        filled: true,
-                        hintText: 'Juan Perez',
-                        labelText: 'Nombre del Propietario',
-                        prefixText: ''),
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        filled: true,
-                        hintText: 'Local, Planta o Provincia',
-                        labelText: 'Origen de la cobranza',
-                        prefixText: ''),
-                  ),
-                  TextFormField(
-                    keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
-                        filled: true,
-                        hintText: '000',
-                        labelText: 'Nro de Garrafas vendidas',
-                        suffixText: 'Garrafas'),
+                        labelText: 'Orden depósito'),
                   ),
                   TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         filled: true,
                         hintText: '00.00',
-                        labelText: 'Renta a cobrar',
+                        labelText: 'Saldo Inicial de caja',
+                        prefixText: 'Bs. '),
+                  ),
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                        filled: true,
+                        hintText: '00.00',
+                        labelText: 'Monto de remesa',
                         prefixText: 'Bs '),
                   ),
                   TextFormField(
@@ -97,17 +68,9 @@ class _PaymentPageState extends State<PaymentPage> {
                     decoration: const InputDecoration(
                         filled: true,
                         hintText: '00.00',
-                        labelText: 'Renta cobrada',
+                        labelText: 'Saldo final caja',
                         prefixText: 'Bs '),
-                  ),
-                  TextFormField(
-                    keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
-                        filled: true,
-                        hintText: '00.00',
-                        labelText: 'Renta por cobrar',
-                        prefixText: 'Bs '),
-                  ),
+                  )
                 ],
               )),
         ),

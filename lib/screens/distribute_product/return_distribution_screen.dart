@@ -1,20 +1,19 @@
-//Step 6 for the process
 import 'package:flutter/material.dart';
 
-class PaymentPage extends StatefulWidget {
-  const PaymentPage({super.key});
+class ReturnDistributionPage extends StatefulWidget {
+  const ReturnDistributionPage({super.key});
 
   @override
-  State<PaymentPage> createState() => _PaymentPageState();
+  State<ReturnDistributionPage> createState() => _ReturnDistributionPageState();
 }
 
-class _PaymentPageState extends State<PaymentPage> {
+class _ReturnDistributionPageState extends State<ReturnDistributionPage> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Cobranza de Venta"),
+        title: const Text("Distribución Retorno"),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8),
@@ -46,7 +45,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     decoration: const InputDecoration(
                         filled: true,
                         hintText: '0123',
-                        labelText: 'Nro de Orden de Salida'),
+                        labelText: 'Nro de Orden de Distribución'),
                   ),
                   TextFormField(
                     keyboardType: TextInputType.number,
@@ -73,7 +72,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     decoration: const InputDecoration(
                         filled: true,
                         hintText: 'Local, Planta o Provincia',
-                        labelText: 'Origen de la cobranza',
+                        labelText: 'Destino de distribución',
                         prefixText: ''),
                   ),
                   TextFormField(
@@ -81,32 +80,32 @@ class _PaymentPageState extends State<PaymentPage> {
                     decoration: const InputDecoration(
                         filled: true,
                         hintText: '000',
-                        labelText: 'Nro de Garrafas vendidas',
+                        labelText: 'Carga de salida',
                         suffixText: 'Garrafas'),
                   ),
                   TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         filled: true,
-                        hintText: '00.00',
-                        labelText: 'Renta a cobrar',
-                        prefixText: 'Bs '),
+                        hintText: '000',
+                        labelText: 'Carga vendida',
+                        suffixText: 'Garrafas'),
                   ),
                   TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         filled: true,
-                        hintText: '00.00',
-                        labelText: 'Renta cobrada',
-                        prefixText: 'Bs '),
+                        hintText: '000',
+                        labelText: 'Carga retornada',
+                        suffixText: 'Garrafas'),
                   ),
                   TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                         filled: true,
-                        hintText: '00.00',
-                        labelText: 'Renta por cobrar',
-                        prefixText: 'Bs '),
+                        hintText: '000',
+                        labelText: 'Garrafas perdidas',
+                        suffixText: 'Garrafas'),
                   ),
                 ],
               )),
